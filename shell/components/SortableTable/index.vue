@@ -1792,7 +1792,21 @@ $spacing: 10px;
   }
 
   .bulk {
-    grid-area: bulk;
+
+  .fixed-header-actions {
+    padding: 0 0 20px 0;
+    width: 100%;
+    z-index: z-index('fixedTableHeader');
+    background: transparent;
+    display: grid;
+    /* Reorder so search appears before the buttons */
+    grid-template-columns: [search] minmax(min-content, 240px) [bulk] auto [middle] min-content;
+    grid-column-gap: 10px;
+
+    &.advanced-filtering {
+      grid-template-columns: [bulk] auto [middle] minmax(min-content, auto) [search] minmax(min-content, auto);
+    }
+
 
     $gap: 10px;
 
@@ -1856,11 +1870,13 @@ $spacing: 10px;
     }
   }
 
-  .search {
-    grid-area: search;
-    text-align: right;
-    justify-content: flex-end;
-  }
+
+    .search {
+      grid-area: search;
+      text-align: left;
+      justify-content: flex-start;
+    }
+
 
   .bulk-actions-dropdown {
     display: none; // Handled dynamically

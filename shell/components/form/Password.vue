@@ -141,7 +141,7 @@ export default {
             @click.prevent.stop="hideShowFn"
             @keyup.space.prevent.stop="hideShowFn"
           >
-            {{ hideShowLabel }}
+            <i :class="['eye-icon', reveal ? 'revealed' : 'hidden']" />
           </a>
         </div>
       </template>
@@ -169,11 +169,27 @@ export default {
         align-items: center;
         justify-content: center;
         padding-left: 12px;
-        min-width: 65px;
+        min-width: 44px;
 
         .hide-show:focus-visible {
           @include focus-outline;
           outline-offset: 4px;
+        }
+
+        .eye-icon {
+          width: 20px;
+          height: 20px;
+          display: inline-block;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+        .eye-icon.hidden {
+          /* outline eye */
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23E5ECF6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z'/%3E%3Ccircle cx='12' cy='12' r='3'/%3E%3C/svg%3E");
+        }
+        .eye-icon.revealed {
+          /* eye-off */
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23E5ECF6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M17.94 17.94A10.94 10.94 0 0 1 12 20c-7 0-11-8-11-8a21.77 21.77 0 0 1 5.06-6.94'/%3E%3Cpath d='M1 1l22 22'/%3E%3Cpath d='M9.9 4.24A10.94 10.94 0 0 1 12 4c7 0 11 8 11 8a21.77 21.77 0 0 1-3.34 4.58'/%3E%3Cpath d='M14.12 14.12A3 3 0 0 1 9.88 9.88'/%3E%3C/svg%3E");
         }
       }
     }

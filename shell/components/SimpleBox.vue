@@ -88,9 +88,10 @@ export default {
 .simple-box {
   $padding: 15px;
 
-  background: var(--simple-box-bg) 0% 0% no-repeat padding-box;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0)) 0% 0% no-repeat padding-box, var(--simple-box-bg);
   box-shadow: 0px 0px 10px var(--simple-box-shadow);
   border: 1px solid var(--simple-box-border);
+  border-radius: 10px;
   padding: $padding;
 
   .top {
