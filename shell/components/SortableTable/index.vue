@@ -1294,6 +1294,7 @@ export default {
     <table
       ref="table"
       class="sortable-table"
+      id="rounded-table"
       :class="classObject"
       width="100%"
       role="table"
@@ -1680,6 +1681,29 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+
+  #rounded-table {
+    border-collapse: separate;
+        border-spacing: 0;
+        border-radius: 10px; /* Adjust the value for desired roundness */
+        border: 1px solid #ffffff1e; /* Optional: Add a border to the table */
+        overflow: hidden; /* Ensures content stays within rounded corners */
+
+  }
+  #rounded-table th,
+    #rounded-table td {
+        // border-bottom: 1px solid #ccc; /* Border between rows */
+        // border-right: 1px solid #ccc; /* Border between columns */
+        // padding: 8px;
+    }
+    #rounded-table tr:last-child td {
+        border-bottom: none;
+    }
+
+    #rounded-table th:last-child,
+    #rounded-table td:last-child {
+        border-right: none;
+    }
   .sortable-table.alt-loading {
     opacity: 0.5;
     pointer-events: none;
@@ -1856,8 +1880,8 @@ export default {
   .sortable-table {
     border-collapse: collapse;
     min-width: 400px;
-    border-radius: 5px 5px 0 0;
-    outline: 1px solid var(--border);
+    border-radius: 10px 10px 0 0;
+
     background: var(--sortable-table-bg);
     border-radius: 4px;
 
