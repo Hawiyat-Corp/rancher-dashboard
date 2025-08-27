@@ -1381,12 +1381,7 @@ export default {
   padding: 0;
 }
 
-#rounded-table th,
-#rounded-table td {
-  // border-bottom: 1px solid #0B1739; /* Border between rows */
-  // border-right: 1px solid #ccc; /* Border between columns */
-  // padding: 8px;
-}
+
 
 #rounded-table tr:last-child td {
   border-bottom: none;
@@ -1921,5 +1916,6 @@ $spacing: 10px;
     display: inline-block;
     min-width: 200px;
   }
+}
 }
 </style>
