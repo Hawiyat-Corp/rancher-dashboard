@@ -2071,7 +2071,8 @@ export default {
     z-index: z-index('fixedTableHeader');
     background: transparent;
     display: grid;
-    grid-template-columns: [bulk] auto [middle] min-content [search] minmax(min-content, 200px);
+    /* Reorder so search appears before the buttons */
+    grid-template-columns: [search] minmax(min-content, 240px) [bulk] auto [middle] min-content;
     grid-column-gap: 10px;
 
     &.advanced-filtering {
@@ -2143,8 +2144,8 @@ export default {
 
     .search {
       grid-area: search;
-      text-align: right;
-      justify-content: flex-end;
+      text-align: left;
+      justify-content: flex-start;
     }
 
     .bulk-actions-dropdown {

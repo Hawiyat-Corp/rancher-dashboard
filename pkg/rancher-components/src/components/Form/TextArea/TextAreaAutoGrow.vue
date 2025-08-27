@@ -197,3 +197,34 @@ export default defineComponent({
     @blur="$emit('blur', $event)"
   />
 </template>
+
+<style scoped lang="scss">
+.no-resize {
+  resize: none;
+}
+
+.no-ease {
+  transition: none;
+}
+
+textarea {
+  border-radius: 10px !important;
+  border: 1px solid #dcdfe6 !important;
+  background-color: #f5f7fa !important;
+  padding: 6px 10px !important;
+  transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out !important;
+}
+
+textarea:focus {
+  border-color: #409eff !important;
+  outline: none !important;
+  background-color: #ffffff !important;
+}
+
+textarea:disabled {
+  background-color: #f5f7fa !important;
+  border-color: #e4e7ed !important;
+  color: #c0c4cc !important;
+  cursor: not-allowed !important;
+}
+</style>

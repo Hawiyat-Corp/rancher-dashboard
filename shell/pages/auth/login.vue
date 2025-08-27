@@ -435,8 +435,8 @@ export default {
             :class="{'mt-30': !hasLoginMessage}"
             @submit.prevent
           >
-            <div class="span-6 offset-3">
-              <div class="mb-20">
+            <div class="span-6 offset-3 login-form-slim">
+              <div class="mb-10">
                 <LabeledInput
                   v-if="!firstLogin"
                   ref="username"
@@ -446,7 +446,7 @@ export default {
                   autocomplete="username"
                 />
               </div>
-              <div class="">
+              <div>
                 <Password
                   ref="password"
                   v-model:value="password"
@@ -457,21 +457,18 @@ export default {
               </div>
             </div>
             <div class="mt-20">
-              <div class="col span-12 text-center">
+              <div class="col span-12 text-center login-actions-row">
                 <AsyncButton
                   id="submit"
                   data-testid="login-submit"
                   type="submit"
-                  :action-label="t('login.loginWithLocal')"
+                  action-label="Log in with Local User"
                   :waiting-label="t('login.loggingIn')"
                   :success-label="t('login.loggedIn')"
                   :error-label="t('asyncButton.default.error')"
                   @click="loginLocal"
                 />
-                <div
-                  v-if="!firstLogin"
-                  class="mt-20"
-                >
+                <div v-if="!firstLogin" class="remember-inline">
                   <Checkbox
                     v-model:value="remember"
                     :label="t('login.remember.label')"
@@ -590,5 +587,29 @@ export default {
   .locale-selector {
     position: absolute;
     bottom: 30px;
+  }
+
+  /* Slim form + rounded inputs/buttons and inline actions */
+  .login-form-slim :deep(.labeled-input) { margin-bottom: 12px; }
+  .login-form-slim :deep(input) {
+    height: 30px !important;
+    padding: 6px 10px !important;
+    border-radius: 10px !important;
+  }
+  .login-actions-row {
+    display: inline-flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    :deep(button) {
+      border-radius: 10px !important;
+      padding: 6px 12px !important;
+      height: 30px !important;
+      line-height: 20px !important;
+    }
+  }
+  .remember-inline {
+    display: inline-flex;
+    align-items: center;
   }
 </style>
