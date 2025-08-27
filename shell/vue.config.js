@@ -336,7 +336,8 @@ const getVirtualModules = (dir, includePkg) => {
 };
 
 const getAutoImport = () => new webpack.NormalModuleReplacementPlugin(/^@rancher\/auto-import$/, (resource) => {
-  const ctx = resource.context.split('/');
+  // Support Windows and POSIX paths
+  const ctx = resource.context.split(/\\|\//);
   const pkg = ctx[ctx.length - 1];
 
   resource.request = `@rancher/auto-import/${ pkg }`;
