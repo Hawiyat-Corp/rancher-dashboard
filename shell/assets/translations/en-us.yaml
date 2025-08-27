@@ -3695,7 +3695,7 @@ landing:
     cpuUsed: CPU Used
     memoryUsed: Memory Used
   whatsNew:
-    title: Welcome to Rancher {version}
+    title: Welcome to Hawiyat
     message: Learn more about the improvements and new capabilities in this version
     link: Release Notes
   learnMore: Learn More
@@ -3714,7 +3714,7 @@ landing:
       homePage: Take me to the home page
       lastVisited: Take me to the area I last visited
       custom: "Take me to cluster:"
-  welcomeToRancher: 'Welcome to {vendor}'
+  welcomeToRancher: 'Welcome to Hawiyat'
 
 logging:
   clusterFlow:
@@ -4005,7 +4005,7 @@ neuvector:
 login:
   login: Login
   howdy: Howdy!
-  welcome: Welcome to {vendor}
+  welcome: Welcome to Hawiyat
   landscapeAlt: Landscape image
   loggedOut: You have been logged out.
   loggedOutFromSso: You've been logged out of Rancher, however you may still be logged in to your single sign-on identity provider.
@@ -6055,7 +6055,7 @@ setup:
   useManual: Set a specific password to use
   useRandom: Use a randomly generated password
   copyRandom: Copy random password to clipboard
-  welcome: Welcome to {vendor}!
+  welcome: Welcome to Hawiyat
 
 sortableTable:
   ariaLabel:

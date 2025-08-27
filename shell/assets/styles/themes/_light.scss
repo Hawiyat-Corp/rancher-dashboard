@@ -18,27 +18,27 @@ $light     : #EEEFF4;
 $lighter   : #F4F5FA;
 
 //light body bg
-$lightest  : #FFFFFF;
+$lightest  : #E5ECF6;
 
 //color for items that are not enabled
 $disabled  : $medium;
 
-$primary         : #3D98D3;
+$primary         : #101013;
 $secondary       : $darker;
-$link            : #3D98D3;
+$link            : #101013;
 
 // Status colors
 $success         : #5D995D;
 $warning         : #DAC342;
 $error           : #F64747;
-$info            : #3D98D3;
+$info            : #101013;
 
 $contrasted-dark: $darkest !default;
 $contrasted-light: $lightest !default;
 
 // Text selection color for terminal window (we don't want this to change with the primary color)
 // The terminal alway uses a light background, so okay to use a fixed color
-$selected: rgba(#3D98D3, .5);
+$selected: rgba(#101013, .15);
 
 $drag-over: #DCDEE7;
 
@@ -46,10 +46,10 @@ BODY, .theme-light {
 
   --primary                    : #{$primary};
   --primary-text               : #{contrast-color($primary)};
-  --primary-hover-bg           : #{darken($primary, 10%)};
-  --primary-hover-text         : #{saturate($lightest, 20%)};
-  --primary-active-bg          : #{darken($primary, 25%)};
-  --primary-active-text        : #{contrast-color(darken($primary, 25%))};
+  --primary-hover-bg           : #DCDEE7;
+  --primary-hover-text         : #101013;
+  --primary-active-bg          : #DCDEE7;
+  --primary-active-text        : #101013;
   --primary-border             : #{$primary};
   --primary-banner-bg          : #{rgba($primary, 0.15)};
   --primary-light-bg           : #{rgba($primary, 0.05)};
@@ -79,10 +79,10 @@ BODY, .theme-light {
   --link                    : #{$link};
   --link-text               : #{contrast-color($link)};
   --link-text-secondary     : #{$darker};
-  --link-hover-bg           : #{darken($link, 10%)};
-  --link-hover-text         : #{saturate($lightest, 20%)};
-  --link-active-bg          : #{darken($link, 25%)};
-  --link-active-text        : #{contrast-color(darken($link, 25%))};
+  --link-hover-bg           : #DCDEE7;
+  --link-hover-text         : #101013;
+  --link-active-bg          : #DCDEE7;
+  --link-active-text        : #101013;
   --link-border             : #{$link};
   --link-banner-bg          : #{rgba($link, 0.15)};
   --link-light-bg           : #{rgba($link, 0.05)};
@@ -124,10 +124,10 @@ BODY, .theme-light {
 
   --default                    : #{$light};
   --default-text               : #{contrast-color($light)};
-  --default-hover-bg           : #{darken($light, 10%)};
-  --default-hover-text         : #{saturate($lightest, 20%)};
-  --default-active-bg          : #{darken($light, 25%)};
-  --default-active-text        : #{contrast-color(darken($light, 25%))};
+  --default-hover-bg           : #DCDEE7;
+  --default-hover-text         : #101013;
+  --default-active-bg          : #DCDEE7;
+  --default-active-text        : #101013;
   --default-border             : #{$light};
   --default-banner-bg          : #{rgba($light, 0.15)};
   --default-light-bg           : #{rgba($light, 0.05)};
@@ -426,8 +426,8 @@ BODY, .theme-light {
   --dropdown-text              : #{$darkest};
   --dropdown-active-text       : #{$lightest};
   --dropdown-active-bg         : #{$dark};
-  --dropdown-hover-text        : var(--body-text);
-  --dropdown-hover-bg          : #{$light};
+  --dropdown-hover-text        : #101013;
+  --dropdown-hover-bg          : #DCDEE7;
   --dropdown-disabled-text     : var(--muted);
   --dropdown-disabled-bg       : #{$disabled};
   --dropdown-group-text        : #{$darker};
@@ -520,7 +520,7 @@ BODY, .theme-light {
   --wm-border                  : var(--border);
   --wm-tab-height              : 29px;
 
-  --glance-bg-rgb              : 61, 152, 211;
+  --glance-bg-rgb              : 16, 16, 19;
   --glance-divider             : #{$medium};
 
   --resource-gauge-back-circle : 255, 255, 255, 0.15;
