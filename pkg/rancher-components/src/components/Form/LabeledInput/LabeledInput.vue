@@ -464,6 +464,12 @@ export default defineComponent({
   </div>
 </template>
 <style scoped lang="scss">
+.labeled-input {
+  input, textarea {
+    border-radius: 20px;
+  }
+}
+
 .labeled-input.view {
   input {
     text-overflow: ellipsis;
